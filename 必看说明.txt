@@ -1,0 +1,44 @@
+项目来自互联网，免费开源分享，严禁商业。
+
+music-server 是后端服务端项目
+
+music-manage 是前端管理员端项目
+
+music-client 是前端用户端项目
+
+java1234_小锋老师 亲测可用。
+更多免费毕业设计项目：http://www.java1234.com/a/bysj/javaweb/
+
+图片和音频文件地址：链接：https://pan.baidu.com/s/1NjkFHiNL8Yu2BuJcIliHvg?pwd=1234   提取码：1234 
+
+下载后，解压 放music-server项目目录下
+ 
+B站：功能视频演示： https://www.bilibili.com/video/BV1dv4y1g76g
+
+实现功能：
+音乐播放
+用户登录注册
+用户信息编辑、头像修改
+歌曲、歌单搜索
+歌单打分
+歌单、歌曲评论
+歌单列表、歌手列表分页显示
+歌词同步显示
+音乐收藏、下载、拖动控制、音量控制
+后台对用户、歌曲、歌手、歌单信息的管理
+
+技术栈：
+后端
+SpringBoot + MyBatis
+
+前端
+Vue3.0 + TypeScript + Vue-Router + Vuex + Axios + ElementPlus + Echarts
+
+开发环境：
+JDK： jdk-8u141
+
+mysql：mysql-5.7
+
+node：v14.17.3
+
+IDE：IntelliJ IDEA 2021、webstorm2021
