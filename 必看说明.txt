@@ -6,15 +6,6 @@ music-manage 是前端管理员端项目
 
 music-client 是前端用户端项目
 
-java1234_小锋老师 亲测可用。
-更多免费毕业设计项目：http://www.java1234.com/a/bysj/javaweb/
-
-图片和音频文件地址：链接：https://pan.baidu.com/s/1NjkFHiNL8Yu2BuJcIliHvg?pwd=1234   提取码：1234 
-
-下载后，解压 放music-server项目目录下
- 
-B站：功能视频演示： https://www.bilibili.com/video/BV1dv4y1g76g
-
 实现功能：
 音乐播放
 用户登录注册
@@ -28,11 +19,6 @@ B站：功能视频演示： https://www.bilibili.com/video/BV1dv4y1g76g
 后台对用户、歌曲、歌手、歌单信息的管理
 
 技术栈：
-后端
-SpringBoot + MyBatis
-
-前端
-Vue3.0 + TypeScript + Vue-Router + Vuex + Axios + ElementPlus + Echarts
 
 开发环境：
 JDK： jdk-8u141

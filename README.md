@@ -14,24 +14,43 @@ https://img.shields.io/badge/Java%208-%234479A1.svg?logo=data:image/png;base64,i
     <a href='https://gitee.com/novel_dev_team/novel'><img alt="Gitee forks" src="https://gitee.com/novel_dev_team/novel/badge/fork.svg?theme=gitee"></a>
 </p>
 
-# 音乐网-服务端
+# 音乐网
 
-#### 介绍
-Java SpringBoot 2.6.2 音乐网
-#### 配置环境
-1. Jdk1.8.0 161
-2. Mysql-5.5.27
-3. Apache-maven-3.9.0
-#### 开发工具
-1. IntelliJ IDEA 2022.3.2
-2. Navicat Premium 12
-3. Git 2.24.1
+#### 项目说明
+
++ 此项目为音乐网，后端SpringBoot + MyBatis 前端Vue3.0 + TypeScript + Vue-Router + Vuex + Axios + ElementPlus + Echarts
+
 #### 开发环境
+
 Windows
-#### 安装教程
-1.  在navicat中运行数据库脚本生成对应的数据库表
-2.  在src/main/resources/application.yml文件里更改数据库名称或数据库密码
-3.  在pom.xml文件的父目录运行 mvn clean spring-boot:run 启动后端
+
+#### 配置环境
+
+| 程序           | 版本        | 说明                       |
+|--------------|-----------|--------------------------|
+| Jdk          | 1.8.0 161 | Java 开发工具包               |
+| Mysql        | 5.5.27    | 关系型数据库                   |
+| Apache-maven | 3.9.0     | Java 项目管理和构建工具           |
+| Nvm          | 1.10      | Node.js 版本管理器            |
+| Node         | 18.15.0   | Node.js JavaScript 运行时环境 |
+
+#### 开发工具
+
+| 工具                       | 版本            | 说明                      |
+|--------------------------|---------------|-------------------------|
+| IDEA                     | 2022.3.2      | 后前端开发IDE                |
+| Git                      | 2.24.1        | 代码托管平台                  |
+| Google   Chrome          | 75.0.3770.100 | 浏览器、前端调试工具              |
+| Navicat                  | 11.1.13       | 数据库连接工具                 |
+| Postman                  | 7.1.0         | 接口测试工具                  |
+| VMware   Workstation Pro | 14.1.3        | 虚拟机(未用到或许你会用到)          |
+| PowerDesigner            | 15            | 数据库设计工具(未用到或许你会用到)      |
+| SQLyog                   | 12.0.3        | 数据库连接工具 (未用到或许你会用到)     |
+| Visio                    | 2013          | 时序图、流程图等绘制工具(未用到或许你会用到) |
+| ProcessOn                | ——            | 架构图等绘制工具(未用到或许你会用到)     |
+| XMind   ZEN              | 9.2.0         | 思维导图绘制工具(未用到或许你会用到)     |
+| RedisDesktop             | 0.9.3.817     | redis客户端连接工具(未用到或许你会用到) |
+
 #### 编码规范
 
 - 规范方式：严格遵守阿里编码规约。
@@ -40,39 +59,166 @@ Windows
 - 注释完整：描述性高大量减少了开发人员的代码阅读工作量。
 - 工具规范：使用统一jar包避免出现内容冲突。
 - 代码整洁：可读性、维护性高。
-- 依赖版本：所有依赖均使用当前最新可用版本以便新技术学习。
 
 #### 包结构
 
 ```
-    src
-     +- main
-     |   +- java
-     |   |    +- com
-     |   |    |    +- tencent
-     |   |    |    |    +- music
-     |   |    |    |    |    +- common
-     |   |    |    |    |    +- config
-     |   |    |    |    |    +- constart
-     |   |    |    |    |    +- controller
-     |   |    |    |    |    +- dao
-     |   |    |    |    |    +- domain
-     |   |    |    |    |    +- service
-     |   |    |    |    |    |    +- impl
-     |   |    |    |    |    +- MusicApplication.java -- 项目入口 项目启动类
-     |   +- resources   |    |
-     |   |    +- mapper |    |
-     |   |    |    +- ...xml
-     |   |    +- application.properties
-     |   |    +- generatorConfig.xml
-     |   |    |    |    |    |
-     +- test  |    |    |    |
-     |   +- java   |    |    |
-     |   |    +- com    |    |
-     |   |    |    +- tencent
-     |   |    |    |    +- music
-     |   |    |    |    |    +- MusicApplicationTests.java
+ +- music-client -- 客户端项目
+    +- public
+        +- favicon.ico -- 网站的图标文件
+        +- index.html -- 应用程序的主页面
+    +- src
+        +- api -- 存放与后端 API 交互的模块
+        +- assets -- 静态资源文件 如图片、字体等
+        +- components -- Vue 组件
+        +- enums -- 存放枚举类型的文件
+        +- mixins -- 存放混入的 Vue 代码
+        +- router -- 路由配置
+        +- store -- 存放 Vuex 状态管理器的相关代码
+        +- utils -- 存放一些公共的工具函数或类
+        +- views -- 存放页面级组件
+        +- App.vue -- 根组件 协调整个应用程序的视图和管理应用程序的状态
+        +- main.js -- 项目的入口文件
+        +- shims-vue.d.ts -- 定义 Vue 类型的声明文件
+    +- .browserslistrc --  定义项目支持的浏览器范围
+    +- .eslintrc.js -- ESLint 的配置文件
+    +- .gitignore -- 指定需要 Git 忽略的文件或目录
+    +- babel.config.js -- Babel 编译器的配置文件
+    +- packge.json -- 项目元数据的文件 用于描述 Node.js 应用程序或模块的属性
+    +- packge-lock.json -- 锁定当前安装的包的版本号和依赖关系
+    +- READE.md -- 项目的相关信息文档
+    +- tsconfig.json -- TypeScript 的配置文件，用于指定编译器选项和编译文件列表
+    +- vue.config.js -- Vue CLI 的配置文件，用于配置一些构建和开发环境的相关选项
+ +- music-manage -- 管理员界面
+    +- public
+        +- favicon.ico -- 网站的图标文件
+        +- index.html -- 应用程序的主页面
+    +- src
+        +- api -- 存放与后端 API 交互的模块
+        +- assets -- 静态资源文件 如图片、字体等
+        +- components -- Vue 组件
+        +- enums -- 存放枚举类型的文件
+        +- mixins -- 存放混入的 Vue 代码
+        +- router -- 路由配置
+        +- store -- 存放 Vuex 状态管理器的相关代码
+        +- utils -- 存放一些公共的工具函数或类
+        +- views -- 存放页面级组件
+        +- App.vue -- 根组件 协调整个应用程序的视图和管理应用程序的状态
+        +- main.js -- 项目的入口文件
+        +- shims-vue.d.ts -- 定义 Vue 类型的声明文件
+    +- .browserslistrc --  定义项目支持的浏览器范围
+    +- .eslintrc.js -- ESLint 的配置文件
+    +- .gitignore -- 指定需要 Git 忽略的文件或目录
+    +- babel.config.js -- Babel 编译器的配置文件
+    +- packge.json -- 项目元数据的文件 用于描述 Node.js 应用程序或模块的属性
+    +- packge-lock.json -- 锁定当前安装的包的版本号和依赖关系
+    +- READE.md -- 项目的相关信息文档
+    +- tsconfig.json -- TypeScript 的配置文件，用于指定编译器选项和编译文件列表
+    +- vue.config.js -- Vue CLI 的配置文件，用于配置一些构建和开发环境的相关选项
+ +- music-server -- 服务端项目
+    +- .mvn
+        +- wrapper -- Maven Wrapper 相关文件
+            +- maven-wrapper.jar -- Maven Wrapper 的核心 Jar 包
+            +- maven-wrapper.properties -- Maven Wrapper 的配置文件
+    +- avatorImages -- 存放用户头像图片
+    +- img
+        +- avatorImages -- 存放用户头像图片
+        +- singerPic -- 存放歌手头像图片
+        +- songListPic -- 存放歌单封面图片
+        +- songPic -- 存放歌曲封面图片
+    +- logs -- 存放应用程序日志文件
+    +- song -- 存放歌曲文件
+    +- sql -- 存放 SQL 脚本文件
+    +- src
+    |   +- main
+    |   |    +- java
+    |   |    |    +- com
+    |   |    |    |    +- tencent
+    |   |    |    |    |    +- music
+    |   |    |    |    |    |    +- common -- 存放应用程序通用类
+    |   |    |    |    |    |    +- config -- 存放应用程序配置相关的类
+    |   |    |    |    |    |    +- constant -- 存放应用程序常量类
+    |   |    |    |    |    |    +- controller -- 控制器类 负责接收和处理HTTP请求
+    |   |    |    |    |    |    +- dao -- 存放 DAO 接口及其实现类
+    |   |    |    |    |    |    +- domain -- 存放实体类
+    |   |    |    |    |    |    +- service -- 存放 Service 接口及其实现类
+    |   |    |    |    |    |       +- impl -- 存放 Service 接口的默认实现类
+    |   |    |    |    |    |    +- MusicApplication.java -- 应用程序入口类
+    |   |    +- resources
+    |   |       +- mapper
+    |   |           +- AdminMapper.xml -- 管理员用户 Mapper 文件
+    |   |           +- CollectMapper.xml -- 歌曲收藏 Mapper 文件
+    |   |           +- CommentMapper.xml -- 评论 Mapper 文件
+    |   |           +- ConsumerMapper.xml -- 普通用户 Mapper 文件
+    |   |           +- ListSongMapper.xml -- 歌单包含的歌曲 Mapper 文件
+    |   |           +- RankListMapper.xml -- 排行榜 Mapper 文件
+    |   |           +- SingerMapper.xml -- 歌手 Mapper 文件
+    |   |           +- SongListMapper.xml -- 歌单 Mapper 文件
+    |   |           +- SongMapper.xml -- 歌曲 Mapper 文件
+    |   |       +- application.properties -- 应用程序的配置信息
+    |   |       +- generatorConfig.xml -- MyBatis Generator 的配置文件
+    |   |       +- log4j.properties -- log4j 的配置文件
+    |   |       +- mysql-connector-java-8.0.13.jar -- MySQL 驱动包
+    |   +- test -- 测试代码
+    |  	|	+- java
+    |  	|	    +- com
+    |  	|	        +- tencent
+    |  	|	            +- music
+    |  	|	                +- MusicApplicationTests.java -- 应用程序测试类
+    +- target -- Maven建项目时自动生成的目录
+    +- .gitignore -- 指定需要 Git 忽略的文件或目录
+    +- LICENSE -- 开源软件的授权协议
+    +- mvnw --  Maven Wrapper 的脚本，作用是为了在开发团队中使用一致的 Maven 版本，以及简化在新环境中安装 Maven 的步骤 用于 Linux 或 macOS 系统
+    +- mvnw.cmd --  Maven Wrapper 的脚本，作用是为了在开发团队中使用一致的 Maven 版本，以及简化在新环境中安装 Maven 的步骤 用于 Windows 系统
+    +- pom.xml -- 用于声明和管理项目依赖的XML文件
+    +- README.md -- 项目的相关信息文档
+ +- sql脚本 -- 存放 SQL 脚本文件
+ +- .gitignore -- 指定需要 Git 忽略的文件或目录
+ +- LICENSE -- 开源软件的授权协议
+ +- README.md -- 项目的相关信息文档
 ```
+
+#### 后端技术栈
+
+| 技术                   | 版本                   | 说明                       |
+|----------------------|----------------------|--------------------------|
+| Spring Boot          | 2.6.2                | 基于 Spring Boot 构建        |
+| MySQL                | 8.0.16               | 数据库                      |
+| MyBatis              | 1.3.2                | 数据持久层框架                  |
+| MyBatis Spring Boot  | 1.1.1                | MyBatis 的 Spring Boot 集成 |
+| Apache Commons Lang  | 3.8.1                | 通用工具类库                   |
+| FastJSON             | 1.2.47               | JSON 解析库                 |
+| Log4j                | 1.3.8.RELEASE, 2.8.2 | 日志库                      |
+| Log4j-to-SLF4J       | 2.8.2                | Log4j 到 SLF4J 的桥接        |
+| JUnit                | 4.13.1               | 单元测试框架                   |
+| Spring Boot DevTools |                      | 热部署模块                    |
+
+#### 前端技术栈
+
+| 技术                               | 版本      | 说明                   |
+|----------------------------------|---------|----------------------|
+| axios                            | ^0.26.0 | HTTP客户端              |
+| core-js                          | ^3.8.3  | JavaScript库          |
+| element-plus                     | ^2.0.4  | 基于ElementUI的UI库      |
+| vue                              | ^3.2.13 | 渐进式JavaScript框架      |
+| vue-router                       | ^4.0.3  | Vue路由框架              |
+| vuex                             | ^4.0.0  | Vue状态管理框架            |
+| @element-plus/icons-vue          | ^1.0.0  | ElementPlus图标库       |
+| @typescript-eslint/eslint-plugin | ^5.4.0  | TypeScript ESlint插件  |
+| @typescript-eslint/parser        | ^5.4.0  | TypeScript ESlint解析器 |
+| @vue/cli-plugin-babel            | ~5.0.0  | Vue Babel插件          |
+| @vue/cli-plugin-eslint           | ~5.0.0  | Vue ESlint插件         |
+| @vue/cli-plugin-router           | ~5.0.0  | Vue路由插件              |
+| @vue/cli-plugin-typescript       | ~5.0.0  | Vue TypeScript插件     |
+| @vue/cli-plugin-vuex             | ~5.0.0  | Vue Vuex插件           |
+| @vue/cli-service                 | ~5.0.0  | Vue CLI服务            |
+| @vue/eslint-config-typescript    | ^9.1.0  | Vue ESlint配置         |
+| eslint                           | ^7.32.0 | 代码规范检查工具             |
+| eslint-plugin-vue                | ^8.0.3  | Vue ESlint插件         |
+| sass                             | ^1.32.7 | CSS预处理器              |
+| sass-loader                      | ^12.0.0 | Webpack Sass加载器      |
+| typescript                       | ~4.5.5  | TypeScript编译器        |
+
 #### 拓展知识
 
 1. [如何将sql文件导入到navicat中？](https://blog.csdn.net/will__be/article/details/107542003)
