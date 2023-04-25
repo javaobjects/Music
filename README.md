@@ -221,7 +221,8 @@ Windows
 #### 项目启动
 - 1.数据库：mysql5.6在navicat中运行数据库脚本生成对应的数据库表
 - 2.后台启动：导入项目，在src/main/resources/application.yml文件里更改数据库名称或数据库密码,进入控制台，到项目所在路径，执行命令：mvn clean spring-boot:run
-- 3.前台启动：导入项目，进入控制台，到项目所在路径，执行命令：npm install 后 npm run serve 即可访问
+- 3.前台启动：导入项目，进入控制台，到项目所在路径，执行命令：npm install 后 npm run serve 输入用户名：234321 密码：123 即可登录
+- 4.后台管理界面启动：导入项目，进入控制台，到项目所在路径，执行命令：npm install 后 npm run serve 输入用户名：admin 密码：123 即可登录
 
 ![](readme/sb-1.png)
 
@@ -232,6 +233,32 @@ Windows
 ![](readme/sb-4.png)
 
 ![](readme/vue-1.png)
+
+![](readme/vue-2.png)
+
+#### 效果展示
+
++ 客户端
+
+![](readme/music-1.png)
+
+![](readme/music-2.png)
+
+![](readme/music-3.png)
+
+![](readme/music-4.png)
+
+![](readme/music-5.png)
+
++ 后台管理界面
+
+![](readme/music-6.png)
+
+![](readme/music-7.png)
+
+![](readme/music-8.png)
+
+![](readme/music-9.png)
 
 #### 拓展知识
 
@@ -269,3 +296,4 @@ Windows
 32. [IDEA多行编辑](https://blog.csdn.net/qq_22803691/article/details/111180873)
 33. [如何修改MySQL数据库名称](https://zhuanlan.zhihu.com/p/264878599)
 34. [在 Navicat for MySQL 中如何重命名数据库名](https://www.shuijingwanwq.com/2020/01/21/3899/)
+35. [vue cli4 修改静态html的 %= htmlWebpackPlugin.options.title % 默认值](https://www.mulingyuer.com/archives/708/)

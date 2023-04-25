@@ -1,1 +1,1 @@
-export const MUSICNAME = 'my_music 后台管理'
+export const MUSICNAME = 'Music 后台管理'
