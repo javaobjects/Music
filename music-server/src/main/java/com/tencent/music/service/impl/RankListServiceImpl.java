@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author Administrator
+ * @author xianxian
  */
 @Service
 public class RankListServiceImpl implements RankListService {
